@@ -1,1 +1,0 @@
-# Dr's GauVedic Cow Farm
