@@ -1,148 +1,441 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta name="google-site-verification" content="NCO5_LJZ-YfPaBI3bWJDNVlTB6_btNSReOmr9MHJP5Y" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Dr's GauVedic Cow Farm </title>
-    <script type="text/javascript" src="script.js"></script>  
-    <link rel="icon" href="dr.jpg" type="image/x-icon">
+    <meta name="google-site-verification" content="NCO5_LJZ-YfPaBI3bWJDNVlTB6_btNSReOmr9MHJP5Y" />
+    <meta name="description" content="Dr's GauVedic Cow Farm offers pure Desi Cow Ghee made using traditional Vedic methods. Order now for a taste of purity and tradition.">
+    <title>Dr's GauVedic Cow Farm</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/dr.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        xintegrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            background: #fff;
+            color: #000;
+            height: 64px;
+            z-index: 12;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            height: 64px;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: rgb(14, 123, 116);
+            text-decoration: underline;
+        }
+
+        .navbar a:active {
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+        }
+
+        .logo {
+            margin-left: 3%;
+            font-size: 1.5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 3%;
+        }
+
+        .contact-links .mob {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        .social-link {
+            font-size: 2rem;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #007bff;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            margin: auto;
+        }
+
+        /* Showcase Area */
+        .showcase-area {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/dr2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .showcase-container {
+            text-align: center;
+            color: #fff;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .second-title {
+            font-size: 1.8rem;
+        }
+        
+        /* About Section */
+        #about {
+            padding: 50px 0;
+            background: #f5f5f7;
+        }
+
+        .about-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        #about h3 {
+            font-size: 2.3rem;
+        }
+
+        #about p {
+            font-size: 1.4rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        #about .small {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .about-img {
+            flex: 1 1 400px;
+        }
+
+        .about-text {
+            flex: 1 1 600px;
+        }
+
+        .about-img img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Gallery Section */
+        #gallery {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        #gallery h2 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #555;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-container img {
+            display: block;
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .img-container:hover img {
+            transform: scale(1.1);
+        }
+
+        .img-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(18, 100, 117, 0.8);
+            color: #fff;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .img-container:hover .img-content {
+            transform: translateY(0);
+        }
+
+        .img-content h3 {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        #footer {
+            background: rgb(33, 33, 33);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        #footer h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        #footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #footer a:hover {
+            color: #b3aee5;
+        }
+
+        /* Floating Buttons */
+        .floating-btn {
+            position: fixed;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s;
+            border: none;
+        }
+        .floating-btn:hover {
+            opacity: 1;
+        }
+        
+        #myBtn {
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            display: none; /* Initially hidden */
+        }
+        
+        #myBtn img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #whatsApp {
+            bottom: 2rem;
+            left: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+        }
+        
+        #whatsApp img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            html {
+                font-size: 55%;
+            }
+
+            .navbar-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            .logo {
+                margin: 0 0 1rem 0;
+            }
+            .contact-links {
+                margin: 0;
+            }
+            .about-wrapper {
+                flex-direction: column;
+            }
+            .about-text {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    
 
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar-container container">
-            <h1 class="logo" > Dr's GauVedic Cow Farm </h1>
-            <p class="mob"><a href="tel:8169662122">+91 816 966 2122</a></p>          
+            <a href="#showcase" class="logo">Dr's GauVedic Cow Farm</a>
+            <div class="contact-links">
+                <a href="tel:8169662122" class="mob">📞 +91 8169662122</a>
+                <a href="https://www.facebook.com/profile.php?id=61571321488571" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/drsgauvedic?igsh=NHNzZnBqbG1vY3dx" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <nav class="navbar">
-    <div class="navbar-container container">
-        <h1 class="logo">Dr's GauVedic Cow Farm</h1>
-        <div class="contact-links">
-            <p class="mob"><a href="tel:8169662122">+91 816 966 2122</a></p>
-            <a href="https://www.facebook.com/profile.php?id=61571321488571" target="_blank" class="social-link">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/drsgauvedic?igsh=NHNzZnBqbG1vY3dx" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </div>
-</nav>
-    
-    <section class="showcase-area" id="showcase">
-        <div class="showcase-container">
-            <h1 class="main-title" id="home"> Dr's GauVedic Cow Farm</h1>
-            <p class="second-title">  Dr's GauVedic Cow Farm</p>
-            <p class="second-title">☎️Contact Number : +91 816 966 2122</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="about-wrapper container">
-            <div class="about-text">
-                <p class="small">About Us</p>
-                <h3> Dr's GauVedic Cow Farm </h3>
-                <p>
-                    ☀ Jai Gau Mata ☀ "Dr's GauVedic" is a farmer brand. Different types of butter oil (ghee) made from cow, buffalo milk are available in the market. But, if you are looking for pure desi cow ghee, then "Drs GauVedic" has come for you with Pure Desi Cow Ghee. Order ghee from "Dr's GauVedic Cow Farm Pune". Desi Cow Ghee is prepared in Indian Vedic method from the milk of the most popular Indian-origin cows. From babies to mothers, indigenous cow ghee is considered an ideal staple food for their bone health and overall body development and growth.
-                </p>
-                <p>- +91 816 966 2122</p>
-
-                <p>  Consider Contacting Us  </p>
-                <p> ☎️Contact us today to order.</p>
-                <h3>+91 816 966 2122</h3>
+    <!-- Main Content -->
+    <main>
+        <!-- Showcase Section -->
+        <section class="showcase-area" id="showcase">
+            <div class="showcase-container">
+                <h1 class="main-title">Dr's GauVedic Cow Farm</h1>
+                <p class="second-title">Desi Cow Bilona Ghee - Purity In Every Drop</p>
             </div>
-            <div class="about-img">
-                <img src="a1.jpg" alt="Doctor" />
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <a href="#showcase"><button  id="myBtn" ><img src="up.png"style =width:25px;height:25px></button></a>
-    <a href="https://wa.me/8169662122"><button  id="whatsApp" ><img src="whatsapp.png"style =width:55px;height:55px></button></a>
-    <section id="garage">
-        <h2>Gallery</h2>
-        <div class="gallery-container container">
-            <div class="gallery1">
-                <div class="img-container">
-                    <img src="a1.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-wrapper container">
+                <div class="about-img">
+                    <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a1.jpg" alt="Owner of Dr's GauVedic Cow Farm with a promotional banner">
+                </div>
+                <div class="about-text">
+                    <p class="small">About Us</p>
+                    <h3>Pure Desi Cow Ghee</h3>
+                    <p>
+                        ☀ Jai Gau Mata ☀ "Dr's GauVedic" is a farmer brand. While various types of ghee are available, we specialize in pure desi cow ghee. Prepared using the traditional Indian Vedic Bilona method from the milk of indigenous Gir cows, our ghee is a staple for health and wellness. It's ideal for all ages, promoting bone health and overall body development.
+                    </p>
+                    <p><b>Contact us today to place your order!</b></p>
+                    <h3>+91 8169662122</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-container">
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a2.jpg" alt="A collection of Dr's GauVedic Ghee jars">
+                        <div class="img-content">
+                            <h3>Our Products</h3>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a3.jpg" alt="Promotional poster for Dr's GauVedic Ghee with price details">
+                        <div class="img-content">
+                            <h3>Introductory Offer</h3>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a4.jpg" alt="Infographic showing the benefits of A2 Gir Cow Ghee">
+                        <div class="img-content">
+                            <h3>Health Benefits</h3>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/TOHvc.jpg" alt="Close-up of the Dr's GauVedic business card and branding">
+                        <div class="img-content">
+                            <h3>Purity You Can Trust</h3>
+                        </div>
+                    </div>
+                     <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a6.jpg" alt="A hen with its chicks at the farm">
+                        <div class="img-content">
+                            <h3>Life at the Farm</h3>
+                        </div>
+                    </div>
+                     <div class="img-container">
+                        <img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/a5.jpg" alt="A small white rabbit being held">
+                        <div class="img-content">
+                            <h3>Our Animal Friends</h3>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="gallery2">
-                <div class="img-container">
-                    <img src="a2.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery3">
-                <div class="img-container">
-                    <img src="a3.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3> Dr's GauVedic Cow Farm</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="gallery-container container">
-            <div class="gallery4">
-                <div class="img-container">
-                    <img src="a4.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery5">
-                <div class="img-container">
-                    <img src="a5.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery6">
-                <div class="img-container">
-                    <img src="a6.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
-                    </div> 
-                </div>
-            </div>
-             <div class="gallery6">
-                <div class="img-container">
-                    <img src="TOHvc.jpg" alt="error" />
-                    <div class="img-content">
-                        <h3>Dr's GauVedic Cow Farm</h3>
-                    </div> 
-                </div>
-            </div> 
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- maps and footer unchanged -->
+    <!-- Floating Buttons -->
+    <a href="#showcase"><button id="myBtn" class="floating-btn"><img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/up.png" alt="Scroll to top"></button></a>
+    <a href="https://wa.me/918169662122" target="_blank"><button id="whatsApp" class="floating-btn"><img src="https://raw.githubusercontent.com/purebudgie1208/drs-gau-vedic/main/whatsapp.png" alt="WhatsApp us"></button></a>
 
+    <!-- Footer -->
     <footer id="footer">
-        <h2><a href="https://ideaclicks.in/">Designed by IdeaClicks</a></h2>
+        <h2><a href="https://ideaclicks.in/" target="_blank">Designed by IdeaClicks</a></h2>
     </footer>
-    
 
-</html>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const myBtn = document.getElementById("myBtn");
+
+            // Show or hide the "scroll to top" button based on scroll position
+            window.onscroll = function () {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    myBtn.style.display = "flex";
+                } else {
+                    myBtn.style.display = "none";
+                }
+            };
+        });
+    </script>
 
 </body>
 
